@@ -9,24 +9,25 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import MoviesList from "./components/MoviesList.vue";
+import Header from './components/Header.vue'
+import MoviesList from './components/MoviesList.vue'
+import './assets/styles.css'
 
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      hello: "Hello Scott",
-      title: "Vue Movie DB",
+      hello: 'Hello Scott',
+      title: 'Vue Movie DB',
       isTrue: true,
-      status: "Ready"
-    };
+      status: 'Ready',
+    }
   },
   components: {
     MoviesList,
     Header,
-  }
-};
+  },
+}
 </script>
 
 <style>
@@ -35,7 +36,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
 }
 </style>

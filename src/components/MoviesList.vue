@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <li v-for="movie in movies" :key="movie.id">
-      <Movie :movie="movie" />
-    </li>
-  </div>
+    <ul>
+      <li v-for="movie in movies" :key="movie.id">
+        <Movie :movie="movie" />
+      </li>
+    </ul>
 </template>
 
 <script>
@@ -38,4 +38,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+ul {
+  display: grid;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  row-gap: 1rem;
+  grid-template-columns: repeat(6,1fr)
+}
+</style>
