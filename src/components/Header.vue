@@ -1,6 +1,9 @@
 <template>
   <header>
-    <h1>{{newTitle}}</h1>
+    <h1><router-link to="/">
+      {{title}}
+      </router-link>
+      </h1>
   </header>
 </template>
 
@@ -15,13 +18,7 @@ export default {
       name: "Beatrix"
     };
   },
-  computed: {
-    newTitle: function() {
-      console.log(this);
-
-      return this.name + " Ducz";
-    }
-  }
+  
 };
 </script>
 
