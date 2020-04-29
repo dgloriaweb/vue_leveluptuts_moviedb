@@ -1,30 +1,22 @@
 <template>
-  <!-- all is standard html + mustache syntax variables -->
-  <div id="app" v-if="status === 'Ready'">
+  <div id="app">
+    <!-- all is standard html + mustache syntax variables -->
     <Header :title="title" />
-    <MoviesList />
+    <router-view />
   </div>
-  <div v-else-if="status === 'Loading'">Loading</div>
-  <div v-else>Error</div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import MoviesList from './components/MoviesList.vue'
-import './assets/styles.css'
 
 export default {
   name: 'App',
   data() {
     return {
-      hello: 'Hello Scott',
       title: 'Vue Movie DB',
-      isTrue: true,
-      status: 'Ready',
     }
   },
   components: {
-    MoviesList,
     Header,
   },
 }
