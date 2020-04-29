@@ -2,7 +2,9 @@
   <div id="app">
     <!-- all is standard html + mustache syntax variables -->
     <Header :title="title" />
-    <router-view />
+    <transition name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
