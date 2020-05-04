@@ -23,7 +23,8 @@ export default {
     fetchData: async function() {
       try {
         const res = await fetch(
-          'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=ec5dc58dd49114aa47aebd1659fef849'
+          // 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=ec5dc58dd49114aa47aebd1659fef849'
+           'https://herokutestnodecrashcourse.herokuapp.com/api/movies'
         )
         const movies = await res.json()
         this.movies = movies.results
